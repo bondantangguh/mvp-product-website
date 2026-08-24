@@ -16,6 +16,14 @@ export const FinalCta = () => (
     <div className="absolute inset-0 bg-navy/80" aria-hidden="true" />
     <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 text-center">
       <Reveal>
+        <img
+          src="/logo-full.webp"
+          alt="MVP — Match Value Projection"
+          className="mx-auto h-24 sm:h-28 w-auto mb-10"
+          data-testid="final-cta-logo"
+        />
+      </Reveal>
+      <Reveal>
         <h2 className="font-display font-black uppercase tracking-tighter leading-[0.9] text-5xl sm:text-7xl text-white" data-testid="final-cta-headline">
           Ready to track your <span className="brand-split">next match?</span>
         </h2>

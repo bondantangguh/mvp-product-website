@@ -102,7 +102,7 @@ export const Hero = () => {
             transition={{ delay: 1.1, duration: 0.8 }}
             className="mt-8 font-mono2 text-[10px] tracking-[0.25em] text-white/40 uppercase"
           >
-            Free to start · iOS &amp; Android · Stop counting. Start understanding the match.
+            Game stats beyond scoreboard · Free to start · iOS &amp; Android
           </motion.p>
         </div>
 

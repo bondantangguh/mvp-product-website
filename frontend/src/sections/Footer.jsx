@@ -16,8 +16,8 @@ export const Footer = () => (
     <div className="max-w-7xl mx-auto px-5 sm:px-8">
       <div className="grid md:grid-cols-12 gap-10">
         <div className="md:col-span-4">
-          <p className="font-display font-black text-3xl text-white brand-split-sm" data-testid="footer-logo">MVP</p>
-          <p className="mt-3 text-sm text-white/50 max-w-xs">
+          <img src="/logo-full.webp" alt="MVP — Match Value Projection" className="h-20 w-auto" data-testid="footer-logo" />
+          <p className="mt-4 text-sm text-white/50 max-w-xs">
             Padel Match Tracking &amp; Statistics. Turn live Padel matches into useful data.
           </p>
         </div>

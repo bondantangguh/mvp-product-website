@@ -26,6 +26,7 @@ Landing sections: Hero (kinetic headline + device mockup) → marquee → Proble
 - Beta signup backend + MongoDB storage + duplicate handling + owner email notification (Emergent managed email).
 - Password-protected admin page (JWT): view/search/approve/reject applicants; approval sets 1-month beta window.
 - SEO meta (title, description, keywords), lazy images, mobile-first responsive layouts, data-testids throughout.
+- Real MVP logo integrated (2026-08-24): /public/logo-mark.webp (nav, admin dashboard) and /public/logo-full.webp (footer, final CTA, admin login). Tagline "Game Stats Beyond Scoreboard" used in hero microcopy and admin.
 - Verified: signup (incl. duplicate), login, list/search/approve APIs, unauthorized 401, beta form e2e, admin e2e, mobile no-horizontal-scroll.
 
 ## Known Gaps / Pending

@@ -76,8 +76,8 @@ export default function Admin() {
     return (
       <main className="min-h-screen bg-navy grain flex items-center justify-center px-5" data-testid="admin-login-page">
         <form onSubmit={login} className="relative z-10 w-full max-w-sm rounded-3xl bg-white p-8 shadow-2xl" data-testid="admin-login-form">
-          <p className="font-display font-black text-2xl text-navy brand-split-sm">MVP ADMIN</p>
-          <p className="mt-1 text-sm text-navy/50">Beta tester management</p>
+          <img src="/logo-full.webp" alt="MVP — Match Value Projection" className="h-16 w-auto" />
+          <p className="mt-3 text-sm text-navy/50 font-bold">ADMIN — Beta tester management</p>
           <label htmlFor="admin-email" className="block mt-6 font-mono2 text-[10px] tracking-[0.25em] text-navy/50 uppercase mb-2">Email</label>
           <input
             id="admin-email"
@@ -119,8 +119,11 @@ export default function Admin() {
       <div className="relative z-10 max-w-6xl mx-auto">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <p className="font-display font-black text-3xl text-white brand-split-sm">MVP ADMIN</p>
-            <p className="text-sm text-white/50">Beta applicants{applicants ? ` · ${applicants.length}` : ""}</p>
+            <div className="flex items-center gap-3">
+              <img src="/logo-mark.webp" alt="MVP" className="h-9 w-auto" />
+              <span className="font-display font-black text-xl text-white tracking-tight">ADMIN</span>
+            </div>
+            <p className="text-sm text-white/50 mt-1">Beta applicants{applicants ? ` · ${applicants.length}` : ""} · Game stats beyond scoreboard</p>
           </div>
           <div className="flex items-center gap-3">
             <button
