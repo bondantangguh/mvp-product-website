@@ -7,6 +7,9 @@ const CARDS = [
   { img: "/screenshots/IMG_6439.webp", label: "Service Order", alt: "MVP first server and receiver selection" },
   { img: "/screenshots/IMG_6440.webp", label: "Live Match Tracker", alt: "MVP live match tracker screen" },
   { img: "/screenshots/IMG_6441.webp", label: "Point Control", alt: "MVP point attribution flow screen" },
+  { img: "/screenshots/IMG_6442.webp", label: "Statistics", alt: "MVP match statistics overview screen" },
+  { img: "/screenshots/IMG_6443.webp", label: "Match Summary", alt: "MVP match summary with event history" },
+  { img: "/screenshots/IMG_6447.webp", label: "Cross Comparison", alt: "MVP cross player comparison statistics" },
 ];
 
 export const Showcase = () => (
@@ -22,12 +25,11 @@ export const Showcase = () => (
         </Reveal>
         <Reveal delay={0.15}>
           <p className="text-white/55 text-base max-w-sm">
-            Real screens from the current Beta V1.2.4 — designed to be used one-handed, mid-match.
-          </p>
+            Real screens from the current Beta V1.2.4 — designed to be used one-handed, mid-match.          </p>
         </Reveal>
       </div>
 
-      <div className="mt-14 flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory lg:grid lg:grid-cols-5 lg:overflow-visible" data-testid="showcase-gallery">
+      <div className="mt-14 flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:overflow-visible" data-testid="showcase-gallery">
         {CARDS.map((card, i) => (
           <Reveal key={card.img} delay={i * 0.08} className="snap-center shrink-0">
             <div className={`transition-transform duration-500 hover:-translate-y-3 ${i % 2 === 1 ? "lg:mt-12" : ""}`}>

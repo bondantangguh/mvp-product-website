@@ -1,5 +1,4 @@
-import { Reveal, ChapterLabel } from "@/components/Reveal";
-import { PhoneMockup } from "@/components/PhoneMockup";
+import { ChapterLabel, Reveal } from "@/components/Reveal";
 import { PhoneFrame } from "@/components/PhoneFrame";
 
 const STEPS = [
@@ -19,7 +18,7 @@ const STEPS = [
     tags: ["Score", "Serve stats", "Return stats", "Attribution"],
   },
   {
-    n: "04", title: "Review", screen: "summary",
+    n: "04", title: "Review", img: "/screenshots/IMG_6444.webp", imgAlt: "MVP saved match review with statistics, summary, report, and history",
     copy: "After the match: full statistics, match summary, report, and organized match history.",
     tags: ["Statistics", "Summary", "Report", "History"],
   },
@@ -63,11 +62,7 @@ export const HowItWorks = () => (
             <div className={`lg:col-span-5 flex justify-center ${i % 2 === 1 ? "lg:order-1" : ""}`}>
               <Reveal delay={0.15}>
                 <div className={i % 2 === 1 ? "rotate-[-3deg]" : "rotate-[3deg]"}>
-                  {step.img ? (
-                    <PhoneFrame src={step.img} alt={step.imgAlt} glow={false} />
-                  ) : (
-                    <PhoneMockup screen={step.screen} glow={false} />
-                  )}
+                  <PhoneFrame src={step.img} alt={step.imgAlt} glow={false} />
                 </div>
               </Reveal>
             </div>
