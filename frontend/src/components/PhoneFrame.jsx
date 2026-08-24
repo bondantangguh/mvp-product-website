@@ -12,14 +12,16 @@ export const PhoneFrame = ({ src, alt, className = "", glow = true, eager = fals
       <div className="absolute -right-[2.5px] top-[168px] w-[3px] h-[64px] rounded-r-md bg-[#2a2e38]" aria-hidden="true" />
       {/* Screen */}
       <div className="relative h-full w-full rounded-[2.55rem] overflow-hidden bg-black ring-1 ring-black">
-        <img
-          src={src}
-          alt={alt}
-          loading={eager ? "eager" : "lazy"}
-          className="h-full w-full object-cover"
-        />
+        <div className="h-full w-full bg-white p-[10px]">
+          <img
+            src={src}
+            alt={alt}
+            loading={eager ? "eager" : "lazy"}
+            className="h-full w-full object-cover rounded-[1.55rem]"
+          />
+        </div>
         {/* Dynamic Island */}
-        <div className="absolute top-[9px] left-1/2 -translate-x-1/2 w-[74px] h-[20px] bg-black rounded-full shadow-[0_0_0_1px_rgba(0,0,0,0.9)]" aria-hidden="true" />
+        <div className="absolute top-[17px] left-1/2 -translate-x-1/2 w-[70px] h-[19px] bg-black rounded-full shadow-[0_0_0_1px_rgba(0,0,0,0.9)]" aria-hidden="true" />
         {/* Subtle glass sheen */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/[0.07] via-transparent to-transparent pointer-events-none" aria-hidden="true" />
       </div>
