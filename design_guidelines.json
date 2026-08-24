@@ -1,0 +1,134 @@
+{
+  "project_overview": {
+    "name": "MVP — Match Value Projection",
+    "type": "landing_page",
+    "vibe": "Awwwards Site-of-the-Day level. Contemporary, premium sport-tech, minimal, athletic, editorial, high-end mobile product presentation. Bold single distinctive art direction. Kinetic and purposeful.",
+    "theme": "Light mode default, but high contrast dark sections (Navy/Black) for dramatic effect and highlighting device mockups."
+  },
+  "colors": {
+    "css_variables": {
+      ":root": {
+        "--background": "0 0% 100%",
+        "--foreground": "222.2 47.4% 11.2%",
+        "--primary": "222.2 47.4% 11.2%",
+        "--primary-foreground": "0 0% 100%",
+        "--secondary": "199 89% 48%",
+        "--secondary-foreground": "0 0% 100%",
+        "--accent-cyan": "180 100% 50%",
+        "--accent-pink": "330 100% 71%",
+        "--navy": "222 47% 11%",
+        "--light-blue": "200 90% 80%",
+        "--semantic-green": "142 71% 45%",
+        "--semantic-yellow": "45 93% 47%",
+        "--semantic-red": "0 84% 60%",
+        "--border": "214.3 31.8% 91.4%",
+        "--muted": "210 40% 96.1%",
+        "--muted-foreground": "215.4 16.3% 46.9%"
+      },
+      ".dark": {
+        "--background": "222.2 47.4% 11.2%",
+        "--foreground": "0 0% 100%",
+        "--primary": "0 0% 100%",
+        "--primary-foreground": "222.2 47.4% 11.2%",
+        "--secondary": "199 89% 48%",
+        "--secondary-foreground": "0 0% 100%",
+        "--border": "216 34% 17%",
+        "--muted": "223 47% 15%",
+        "--muted-foreground": "215 20.2% 65.1%"
+      }
+    },
+    "strategy": "White and Navy form the foundational contrast. Use Cyan and Pink for a 'TikTok-like' energetic accent pairing, particularly on hover states, text outlines, or motion highlights. Avoid soft gradients; prefer hard-edged brutalist accents or precise lighting gradients."
+  },
+  "typography": {
+    "fonts": {
+      "heading": "'Cabinet Grotesk', sans-serif",
+      "body": "'Satoshi', sans-serif",
+      "mono": "'JetBrains Mono', monospace"
+    },
+    "rules": {
+      "h1": "text-5xl sm:text-6xl+ font-black tracking-tighter uppercase leading-[0.85] text-navy dark:text-white",
+      "h2": "text-4xl sm:text-5xl font-bold tracking-tight uppercase leading-none",
+      "h3": "text-2xl sm:text-3xl font-bold tracking-tight",
+      "body": "text-lg text-muted-foreground leading-relaxed",
+      "labels": "text-xs font-bold tracking-[0.2em] uppercase text-accent-pink"
+    },
+    "notes": "Avoid Inter/Roboto/Space Grotesk. Use Cabinet Grotesk for a punchy, athletic, modern editorial look. Large headings should use tight line-heights and letter-spacing for massive impact."
+  },
+  "visual_enhancers": {
+    "photography_treatment": "Curated padel action shots treated with 'spotlight' effects, harsh contrast, or clipped into distinctive frames (e.g., sharp rectangles, slight rotation, or arches). Images shouldn't feel like generic corporate stock. Desaturate slightly and punch the contrast.",
+    "device_mockups": "Clean, realistic device mockups showing the Padel live-tracker UI. Treat them heroically: floating with soft ambient drop-shadows on dark backgrounds, or sharp brutalist borders on light backgrounds.",
+    "marquee": "One slow editorial marquee. High contrast, large typographic ribbon (e.g., 'RECORD • ANALYZE • DOMINATE •') moving smoothly across the screen using 'react-fast-marquee'.",
+    "manifesto_chapters": "Numbered sections (01, 02, 03) styled like premium editorial layouts. Huge thin numbers overlapping bold text.",
+    "surfaces": "Mix flat solid colored blocks with occasional high-end crystal glassmorphism for floating nav or sticky headers. Do not overuse glass. Favor sharp contrast."
+  },
+  "layouts": {
+    "hero": "Kinetic layout. Large typography masking with line-by-line reveal using Framer Motion. Device mockup piercing the text or positioned asymmetrically. Dual CTA buttons (Solid Primary vs Outlined).",
+    "bento_grid": "Use a wide asymmetrical bento grid (grid-cols-1 md:grid-cols-12) for the Feature section. Mix wide horizontal blocks with tall narrow blocks.",
+    "container_spacing": "Generous spacing. py-24 to py-32 for sections to give an editorial breathing room. p-8 inside cards."
+  },
+  "motion": {
+    "scroll": "MANDATORY: Use `lenis` for smooth momentum scrolling. It gives the Awwwards 'weight'.",
+    "reveal": "Use Framer Motion for section scroll-reveals (fade up, slow drift).",
+    "hero_load": "Signature on-load moment: Text splits into lines, revealed sequentially from behind a mask (overflow-hidden, y: 100% to 0).",
+    "interactions": "Hover on cards slightly scales image inside, adds a cyan/pink neon drop shadow to the border. Magnetic buttons if possible."
+  },
+  "3d_libraries": {
+    "usage": "If needed for a subtle parallax or floating device moment, use standard Framer Motion 3D transforms. For background atmospherics, consider a subtle noise overlay or simple SVG pattern rather than heavy WebGL unless specifically rendering a 3D phone model."
+  },
+  "accessibility": {
+    "contrast": "Ensure white text on navy and navy text on white meets APCA standards. Semantic colors must be legible if used for text.",
+    "test_ids": "Add `data-testid` attributes to all interactive and key informational elements (e.g., `data-testid=\"hero-cta-get\"`, `data-testid=\"beta-signup-submit\"`)."
+  },
+  "image_urls": {
+    "padel_action_1": {
+      "url": "https://images.pexels.com/photos/38254515/pexels-photo-38254515.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Dramatic black and white silhouette of padel player hitting the ball. Great for Hero background or Manifesto chapter.",
+      "category": "hero, background, editorial"
+    },
+    "padel_action_2": {
+      "url": "https://images.pexels.com/photos/35248332/pexels-photo-35248332.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Action shot of woman practicing padel. Use in How It Works or Solution sections.",
+      "category": "content, action"
+    },
+    "padel_court": {
+      "url": "https://images.pexels.com/photos/38155778/pexels-photo-38155778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Modern indoor padel court. Use for background textures or feature cards.",
+      "category": "background, feature"
+    },
+    "phone_mockup": {
+      "url": "https://images.unsplash.com/photo-1629494893504-d41e26a02631?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwxfHxzbWFydHBob25lJTIwbW9ja3VwJTIwYmxhbmt8ZW58MHx8fHwxNzg3NTUzNjQwfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Blank smartphone mockup. Use to overlay the Padel live-tracker UI.",
+      "category": "mockup, ui"
+    }
+  },
+  "component_path": {
+    "ui": "/app/frontend/src/components/ui"
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid the 'AI slop' aesthetic. Make creative, distinctive frontends that surprise and delight.",
+    "Do not use dark colors as gradients. Use solid colors with sharp contrasts.",
+    "Don't make generic centered layouts. Use asymmetrical grids and negative space.",
+    "Create depth through layered design elements with z-index hierarchy and precise shadows.",
+    "Do NOT apply universal transitions (`transition: all`). Always target specific properties to avoid breaking transforms.",
+    "Do NOT center align the root App container. Text must be left-aligned or intentionally set for editorial flow.",
+    "Always use modern button styles (pill-shaped, or brutalist sharp rectangles) with hover animations.",
+    "NEVER use AI assistant emojis 🤖🧠💭💡 for icons. Use Phosphor or Lucide icons.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Include subtle grain textures, custom cursors, and entrance animations to elevate the design.",
+    "Implement `data-testid` on all buttons, forms, inputs, and navigation links.",
+    "Use Shadcn components for forms, inputs, and complex UI, but heavily customize their Tailwind classes to match the 'athletic editorial' vibe."
+  ],
+  "instructions_to_main_agent": [
+    "Initialize standard Shadcn components needed: Button, Input, Form, Accordion, Card.",
+    "Install `framer-motion`, `@studio-freight/react-lenis`, `react-fast-marquee`, `lucide-react`, and `clsx`/`tailwind-merge`.",
+    "Set up Cabinet Grotesk (Heading) and Satoshi (Body) via Google Fonts or standard imports. If unavailable, use Clash Display and Manrope as fallbacks.",
+    "Build the Kinetic Hero: Use framer-motion to create a staggered line-by-line text reveal for the H1.",
+    "Create a 'Problem' section using 6 cards (bento style), contrasting Pen & Paper vs MVP Digital.",
+    "Create 'Solution' and 'How it works' (WATCH → TAP → RECORD → ANALYZE) with large numbered typography (01, 02) overlapping the text.",
+    "Implement the Beta Tester section with a functional-looking form (Email, Name, Role) that transitions to a 'You're on the list' confirmation state.",
+    "Add the Editorial Marquee moving slowly across the screen.",
+    "Construct the Free vs Pro comparison and the Roadmap timeline.",
+    "Ensure the sticky navigation uses a crystal glassmorphism effect (blur + slight saturation) so background images are visible but text remains legible.",
+    "Never use purely transparent backgrounds under text. Always use a scrim, blur, or solid block."
+  ]
+}

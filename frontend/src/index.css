@@ -1,0 +1,152 @@
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800,900&f[]=satoshi@400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 226 56% 10%;
+        --card: 0 0% 100%;
+        --card-foreground: 226 56% 10%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 226 56% 10%;
+        --primary: 226 56% 10%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 210 40% 96.1%;
+        --secondary-foreground: 226 56% 10%;
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 222 20% 40%;
+        --accent: 210 40% 96.1%;
+        --accent-foreground: 226 56% 10%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 220 20% 90%;
+        --input: 220 20% 90%;
+        --ring: 226 56% 10%;
+        --radius: 0.5rem;
+
+        --navy: #0B1226;
+        --navy-2: #111B3A;
+        --cyan: #25F4EE;
+        --pink: #FE2C55;
+        --ice: #BFE3F5;
+        --win: #16A34A;
+        --focus: #EAB308;
+        --warn: #DC2626;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Satoshi', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+    }
+    ::selection {
+        background: var(--cyan);
+        color: var(--navy);
+    }
+}
+
+.font-display {
+    font-family: 'Cabinet Grotesk', sans-serif;
+}
+.font-mono2 {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* TikTok-style split shadow for the brand mark */
+.brand-split {
+    text-shadow: -2px 0 0 var(--cyan), 2px 0 0 var(--pink);
+}
+.brand-split-sm {
+    text-shadow: -1px 0 0 var(--cyan), 1px 0 0 var(--pink);
+}
+
+.text-outline {
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.85);
+    color: transparent;
+}
+.text-outline-navy {
+    -webkit-text-stroke: 1.5px rgba(11, 18, 38, 0.9);
+    color: transparent;
+}
+
+/* Film grain overlay */
+.grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    z-index: 1;
+}
+
+/* Phone screen scroll animation */
+@keyframes screen-scroll {
+    0%, 15% { transform: translateY(0); }
+    45%, 60% { transform: translateY(-33.33%); }
+    90%, 100% { transform: translateY(-66.66%); }
+}
+.screen-scroll {
+    animation: screen-scroll 9s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.25; }
+}
+.pulse-dot {
+    animation: pulse-dot 1.4s ease-in-out infinite;
+}
+
+.chapter-number {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-weight: 900;
+    line-height: 0.75;
+    letter-spacing: -0.04em;
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-style: inherit;
+        border-bottom-style: inherit;
+        border-top-color: inherit;
+        border-right-color: inherit;
+        border-bottom-color: inherit;
+        border-left-color: inherit;
+    }
+}
