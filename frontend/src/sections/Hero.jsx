@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
-import { PhoneMockup } from "@/components/PhoneMockup";
+import { PhoneFrame } from "@/components/PhoneFrame";
 
 const lineAnim = (i) => ({
   initial: { y: "110%" },
@@ -113,7 +113,7 @@ export const Hero = () => {
             transition={{ delay: 0.5, duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
             style={{ rotateX: rx, rotateY: ry, transformStyle: "preserve-3d", perspective: 1000 }}
           >
-            <PhoneMockup screen="live" />
+            <PhoneFrame src="/screenshots/IMG_6441.webp" alt="MVP live match tracking point control on iPhone" eager />
           </motion.div>
           <motion.figure
             initial={{ opacity: 0, x: -40, rotate: -6 }}

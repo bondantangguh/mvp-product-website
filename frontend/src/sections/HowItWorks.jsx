@@ -1,19 +1,20 @@
 import { Reveal, ChapterLabel } from "@/components/Reveal";
 import { PhoneMockup } from "@/components/PhoneMockup";
+import { PhoneFrame } from "@/components/PhoneFrame";
 
 const STEPS = [
   {
-    n: "01", title: "Set Up", screen: "setup",
+    n: "01", title: "Set Up", img: "/screenshots/IMG_6438.webp", imgAlt: "MVP team setup screen",
     copy: "Configure teams, players, match format, first server, and receiving order.",
     tags: ["Teams", "Players", "Format", "First server"],
   },
   {
-    n: "02", title: "Track", screen: "live",
+    n: "02", title: "Track", img: "/screenshots/IMG_6440.webp", imgAlt: "MVP live match tracker ready to serve",
     copy: "Record the point using simple taps — without taking your eyes off the rally.",
     tags: ["One-tap entry", "Winner / Error"],
   },
   {
-    n: "03", title: "Capture", screen: "stats",
+    n: "03", title: "Capture", img: "/screenshots/IMG_6441.webp", imgAlt: "MVP point control with serve and shot attribution",
     copy: "MVP automatically calculates score, serve and return statistics, winners, errors, and player attribution.",
     tags: ["Score", "Serve stats", "Return stats", "Attribution"],
   },
@@ -62,7 +63,11 @@ export const HowItWorks = () => (
             <div className={`lg:col-span-5 flex justify-center ${i % 2 === 1 ? "lg:order-1" : ""}`}>
               <Reveal delay={0.15}>
                 <div className={i % 2 === 1 ? "rotate-[-3deg]" : "rotate-[3deg]"}>
-                  <PhoneMockup screen={step.screen} glow={false} />
+                  {step.img ? (
+                    <PhoneFrame src={step.img} alt={step.imgAlt} glow={false} />
+                  ) : (
+                    <PhoneMockup screen={step.screen} glow={false} />
+                  )}
                 </div>
               </Reveal>
             </div>

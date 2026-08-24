@@ -31,7 +31,7 @@ Landing sections: Hero (kinetic headline + device mockup) → marquee → Proble
 ## Known Gaps / Pending
 - OWNER_EMAIL in backend/.env is a placeholder (owner@example.com) — owner notification 422s until a real email is set.
 - App Store / Google Play / donation URLs are placeholders in src/config.js.
-- App screenshots are coded UI mockups, not real V1.2.4 captures (user had none to share).
+- App screenshots: 5 real V1.2.4 captures (match format, team setup, service order, live tracker, point control) now render in iPhone Pro Max CSS frames (PhoneFrame component, /public/screenshots/). Coded mockup still used for How It Works step 04 (Review) — awaiting stats/summary/history screenshots.
 - DB contains 2 test applicants (coach.sofia@padelclub.com, tester.maria@padel.io) — can be wiped on request.
 
 ## Backlog

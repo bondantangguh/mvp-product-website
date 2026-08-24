@@ -1,12 +1,12 @@
 import { Reveal, ChapterLabel } from "@/components/Reveal";
-import { PhoneMockup } from "@/components/PhoneMockup";
+import { PhoneFrame } from "@/components/PhoneFrame";
 
 const CARDS = [
-  { screen: "setup", label: "Match Setup" },
-  { screen: "live", label: "Live Match Tracker" },
-  { screen: "stats", label: "Statistics" },
-  { screen: "summary", label: "Match Summary" },
-  { screen: "history", label: "Match History" },
+  { img: "/screenshots/IMG_6437.webp", label: "Match Format", alt: "MVP match format selection screen" },
+  { img: "/screenshots/IMG_6438.webp", label: "Team Setup", alt: "MVP team and player setup screen" },
+  { img: "/screenshots/IMG_6439.webp", label: "Service Order", alt: "MVP first server and receiver selection" },
+  { img: "/screenshots/IMG_6440.webp", label: "Live Match Tracker", alt: "MVP live match tracker screen" },
+  { img: "/screenshots/IMG_6441.webp", label: "Point Control", alt: "MVP point attribution flow screen" },
 ];
 
 export const Showcase = () => (
@@ -29,9 +29,9 @@ export const Showcase = () => (
 
       <div className="mt-14 flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory lg:grid lg:grid-cols-5 lg:overflow-visible" data-testid="showcase-gallery">
         {CARDS.map((card, i) => (
-          <Reveal key={card.screen} delay={i * 0.08} className="snap-center shrink-0">
+          <Reveal key={card.img} delay={i * 0.08} className="snap-center shrink-0">
             <div className={`transition-transform duration-500 hover:-translate-y-3 ${i % 2 === 1 ? "lg:mt-12" : ""}`}>
-              <PhoneMockup screen={card.screen} />
+              <PhoneFrame src={card.img} alt={card.alt} />
               <p className="mt-5 text-center font-mono2 text-[10px] tracking-[0.25em] text-white/50 uppercase">
                 {card.label}
               </p>
