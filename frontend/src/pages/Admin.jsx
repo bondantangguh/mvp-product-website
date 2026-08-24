@@ -21,15 +21,14 @@ export default function Admin() {
   const [applicants, setApplicants] = useState(null);
   const [search, setSearch] = useState("");
 
-  const authHeader = { Authorization: `Bearer ${token}` };
-
   const load = useCallback(
     async (q = "") => {
       try {
         const { data } = await axios.get(`${API}/admin/applicants`, {
-          headers: authHeader,
+          headers: { Authorization: `Bearer ${token}` },
           params: q ? { search: q } : {},
         });
+        
         setApplicants(data.applicants);
       } catch (e) {
         if (e.response?.status === 401) {
@@ -64,7 +63,7 @@ export default function Admin() {
 
   const act = async (id, action, body) => {
     try {
-      await axios.post(`${API}/admin/applicants/${id}/${action}`, body, { headers: authHeader });
+      await axios.post(`${API}/admin/applicants/${id}/${action}`, body, { headers: { Authorization: `Bearer ${token}` }, });
       toast.success(action === "approve" ? "Tester approved — 1 month window set" : "Status updated");
       load(search);
     } catch {
