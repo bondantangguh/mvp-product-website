@@ -29,7 +29,7 @@ export const Nav = () => {
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-5 sm:px-8 h-16 sm:h-[72px]">
         <a href="#top" data-testid="nav-logo" className="flex items-center gap-3">
-          <img src="/logo-mark.webp" alt="MVP — Match Value Projection" className="h-9 w-auto" />
+          <img src={`${process.env.PUBLIC_URL}/logo-mark.webp`} alt="MVP — Match Value Projection" className="h-9 w-auto" />
           <span className="hidden sm:inline font-body font-medium text-[10px] tracking-[0.2em] text-white/50">
             MATCH VALUE PROJECTION
           </span>
